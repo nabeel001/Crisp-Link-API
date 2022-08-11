@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 const connectDB = require("./config/db");
 
 const app = express();
@@ -9,6 +10,9 @@ app.use(cors());
 connectDB();
 
 app.use(express.json({ extended: false }));
+// app.get("/", (req, res) => {
+//   res.sendFile(__dirname + "/index.html");
+// });
 app.use("/", require("./routes/index"));
 app.use("/api/url", require("./routes/url"));
 

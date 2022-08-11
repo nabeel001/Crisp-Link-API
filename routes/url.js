@@ -11,7 +11,8 @@ const Url = require("../models/Url");
 
 router.post("/shorten", async (req, res) => {
   const { longUrl } = req.body;
-  const baseUrl = config.get("baseUrl");
+  // const baseUrl = config.get("baseUrl");
+  const baseUrl = process.env.HOST_URL;
 
   //check base url is valid
   if (!validUrl.isUri(baseUrl)) {
@@ -29,7 +30,7 @@ router.post("/shorten", async (req, res) => {
         res.json(url);
       } else {
         const PORT = process.env.PORT || 5000;
-        const shortUrl = baseUrl + PORT + "/" + urlCode;
+        const shortUrl = baseUrl + "/" + urlCode;
         url = new Url({
           longUrl,
           shortUrl,
