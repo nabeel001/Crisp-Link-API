@@ -1,13 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const connectDB = require("./db_config");
+// const connectDB = require("./db_config");
 
 const app = express();
 app.use(cors());
 
 //connect to database
-connectDB();
+// connectDB();
+const mongoose = require("mongoose");
+const connect_string = process.env.MONGO_URI;
+mongoose.connect(connect_string, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.use(express.json({ extended: false }));
 // app.get("/", (req, res) => {
