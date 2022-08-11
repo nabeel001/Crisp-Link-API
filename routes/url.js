@@ -28,7 +28,8 @@ router.post("/shorten", async (req, res) => {
       if (url) {
         res.json(url);
       } else {
-        const shortUrl = baseUrl + "/" + urlCode;
+        const PORT = process.env.PORT || 5000;
+        const shortUrl = baseUrl + PORT + "/" + urlCode;
         url = new Url({
           longUrl,
           shortUrl,
