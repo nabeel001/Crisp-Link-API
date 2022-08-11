@@ -14,8 +14,6 @@ router.post("/shorten", async (req, res) => {
   // const baseUrl = config.get("baseUrl");
   const baseUrl = process.env.HOST_URI;
 
-  res.status(401).json(baseUrl);
-
   //check base url is valid
   if (!validUrl.isUri(baseUrl)) {
     res.status(401).json("Invalid Base Url");
@@ -31,7 +29,7 @@ router.post("/shorten", async (req, res) => {
       if (url) {
         res.json(url);
       } else {
-        const PORT = process.env.PORT || 5000;
+        // const PORT = process.env.PORT || 5000;
         const shortUrl = baseUrl + "/" + urlCode;
         url = new Url({
           longUrl,
