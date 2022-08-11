@@ -14,9 +14,11 @@ router.post("/shorten", async (req, res) => {
   // const baseUrl = config.get("baseUrl");
   const baseUrl = process.env.HOST_URI;
 
+  res.status(401).json(baseUrl);
+
   //check base url is valid
   if (!validUrl.isUri(baseUrl)) {
-    res.status(401).json("Invalid Base Url" + baseUrl);
+    res.status(401).json("Invalid Base Url");
   }
 
   //create url code
