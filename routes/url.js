@@ -1,7 +1,7 @@
 const express = require("express");
+const { nanoid } = require("nanoid");
 const router = express.Router();
 const validUrl = require("valid-url");
-const nanoid = require("nanoid");
 
 const Url = require("../models/Url");
 
