@@ -13,11 +13,12 @@ router.get("/:code", async (req, res) => {
     if (url) {
       return res.redirect(url.longUrl);
     } else {
-      res.status(404).json("No Url found");
+      res.status(404).json("No Url Found");
     }
   } catch (err) {
     console.log(err.message);
     res.status(500).json("Server Error");
   }
 });
+
 module.exports = router;
