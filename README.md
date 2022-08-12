@@ -1,7 +1,8 @@
 # Crisp-Link-API
 
-- Send a POST request with the long url to this API Endpoint and recieve a short url as response
-- sending a GET request to the generated crisp-link (i.e. short url) will redirect to the original url
+- Send a POST request with the Long url to this API Endpoint and recieve a Crisp-Link (i.e. short url) as response.
+- sending a GET request to the generated Crisp-Link will redirect to the original url.
+- check out https://nabeel001.github.io/Crisp-Link/ for implementation details to use this API for your websites and applications.
 
 ### Tools and frameworks used
 
