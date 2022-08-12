@@ -15,7 +15,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.5.2",
-    "shortid": "^2.2.16",
+    "nanoid": "^4.0.0",
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
