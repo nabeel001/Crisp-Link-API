@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const validUrl = require("valid-url");
-import { nanoid } from "nanoid";
+const nanoid = require("nanoid");
 
 const Url = require("../models/Url");
 
