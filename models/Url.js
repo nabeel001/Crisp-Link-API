@@ -4,7 +4,7 @@ const urlSchema = new mongoose.Schema({
   urlCode: String,
   longUrl: String,
   shortUrl: String,
-  createdAt: { type: Date, expires: 3600, default: Date.now },
+  createdAt: { type: Date, expires: 604800, default: Date.now },
   //expires -> 7 days
 });
 
