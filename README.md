@@ -14,4 +14,4 @@
 - IDs of length 9 are used reduce the probability of collision
 - ~2 years needed, in order to have a 1% probability of at least one collision, when 1000 IDs are generated each hour
 - MongoDB Atlas (Cloud Database) is used to map the full links to the IDs
-- This API is currently hosted for free at herokuapp.com
+- This API is currently hosted for free at render.com
